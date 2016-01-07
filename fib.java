@@ -23,23 +23,22 @@ class Solution {
       
       if (memo.containsKey(element)) {
         return memo.get(element);
-      } else {        
-        result = compute(element-1) + compute(element-2);
-        memo.put(element, result);
-      }
-      
-      return compute(element-1) + compute(element-2);
+      }        
+      result = compute(element-1) + compute(element-2);
+      memo.put(element, result);
+        
+      return result;
     }
   }
   
   public static void main(String[] args) {
     Fib fib = new Fib();
     
-    System.out.println(fib.compute(0) == 0);
+    // System.out.println(fib.compute(0) == 0);
     System.out.println(fib.compute(1) == 1);
-    System.out.println(fib.compute(2) == 1);
+    // System.out.println(fib.compute(2) == 1);
     // System.out.println(fib.compute(3) == 2);
-    // System.out.println(fib.compute(4) == 3);
+    System.out.println(fib.compute(4) == 3);
     // System.out.println(fib.compute(5) == 5);
     System.out.println(fib.compute(6) == 8);
     
